@@ -12,6 +12,5 @@ def solution(s):
             needUpper = False
         else:
             answer += text.lower()
-            needUpper = False
     
     return answer
