@@ -2,9 +2,6 @@ def solution(n):
     answer = 1
     a, b = 1, 1
     
-    if n < 2:
-        return 1
-    
     for i in range(n-1):
         answer = a + b
         a, b = b, answer
