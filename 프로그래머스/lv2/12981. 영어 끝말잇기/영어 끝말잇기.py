@@ -19,7 +19,6 @@ def solution(n, words):
                 if answer[0] == 0:
                     answer[0] = n
                 if answer[1] % 1 != 0:
-                    print(answer[1])
                     answer[1] = int(answer[1])+1
                 break
             log.append(word)
