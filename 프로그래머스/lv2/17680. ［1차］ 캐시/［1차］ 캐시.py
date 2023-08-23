@@ -6,7 +6,7 @@ def solution(cacheSize, cities):
         cities[i] = city.lower()
     
     if cacheSize == 0: return len(cities) * 5
-            
+    
     for city in cities:
         if len(cache) < cacheSize:
             if city not in cache:
