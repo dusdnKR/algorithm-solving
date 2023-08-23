@@ -11,20 +11,18 @@ def solution(cacheSize, cities):
         
         if len(cache) < cacheSize:
             if city not in cache:
-                cache.append(city)
                 answer += 5
             else:
                 answer += 1
                 cache.remove(city)
-                cache.append(city)
+            cache.append(city)
         else:
             if city in cache:
                 answer += 1
                 cache.remove(city)
-                cache.append(city)
             else:
                 answer += 5
                 if cache: del cache[0]
-                cache.append(city)
+            cache.append(city)
     
     return answer
