@@ -1,4 +1,17 @@
 def solution(elements):
+    sumSet = set()
+    n = len(elements)
+    
+    for i in range(n):
+        sumOfElements = 0
+        for j in range(i, i+n-1):
+            sumOfElements += elements[j%n]
+            sumSet.add(sumOfElements)
+    
+    return len(sumSet) + 1
+    
+"""
+def solution(elements):
     answer = 0
     numOfElements = len(elements)
     sumOfElements = 0
@@ -17,26 +30,26 @@ def solution(elements):
     answer = len(set(sumList))
     
     return answer
-"""
+
 def solution(elements):
     answer = 0
     numOfElements = len(elements)
     sumOfElements = 0
-    sumList = set()
+    sumSet = set()
     
     for element in elements:
-        sumList.add(element)
+        sumSet.add(element)
         
-    sumList.add(sum(elements))
+    sumSet.add(sum(elements))
     
     elements += elements
     
     for n in range(2, numOfElements):
         for m in range(numOfElements):
             sumOfElements = sum(elements[m:m+n])
-            sumList.add(sumOfElements)
+            sumSet.add(sumOfElements)
     
-    answer = len(sumList)
+    answer = len(sumSet)
     
     return answer
 """
