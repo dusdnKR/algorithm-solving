@@ -6,8 +6,6 @@ def solution(elements):
     
     elements += elements
     
-    
-    
     for n in range(1, numOfElements+1):
         for m in range(numOfElements):
             sumOfElements = sum(elements[m:m+n])
