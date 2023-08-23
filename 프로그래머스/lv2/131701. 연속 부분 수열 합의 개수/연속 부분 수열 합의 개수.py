@@ -17,3 +17,26 @@ def solution(elements):
     answer = len(set(sumList))
     
     return answer
+"""
+def solution(elements):
+    answer = 0
+    numOfElements = len(elements)
+    sumOfElements = 0
+    sumList = set()
+    
+    for element in elements:
+        sumList.add(element)
+        
+    sumList.add(sum(elements))
+    
+    elements += elements
+    
+    for n in range(2, numOfElements):
+        for m in range(numOfElements):
+            sumOfElements = sum(elements[m:m+n])
+            sumList.add(sumOfElements)
+    
+    answer = len(sumList)
+    
+    return answer
+"""
