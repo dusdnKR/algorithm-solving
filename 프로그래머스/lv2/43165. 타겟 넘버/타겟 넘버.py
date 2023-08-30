@@ -6,7 +6,7 @@ def solution(numbers, target):
     binary_list = list(binary_list[3:])
     binary_list[0] = '0'
     
-    while "0" in binary_list:
+    while '0' in binary_list:
         total = 0
         for i, num in enumerate(numbers):
             if binary_list[i] == '0':
