@@ -1,8 +1,8 @@
 def solution(arr):
     
-    arr.remove(sorted(arr)[0])
-    
-    if arr:
-        return arr
+    if len(arr) == 1:
+        arr = [-1]
     else:
-        return [-1]
+        arr.remove(sorted(arr)[0])
+    
+    return arr
