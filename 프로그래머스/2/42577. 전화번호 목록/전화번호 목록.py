@@ -7,8 +7,8 @@ def solution(phone_book):
     
     for l in length:
         length_counter = Counter(phone[:l] for phone in phone_book)
-        for i in length_counter:
-            if length_counter[i] >= 2 and i in phone_counter:
+        for phone in length_counter:
+            if length_counter[phone] >= 2 and phone in phone_counter:
                 answer = False
                 return answer
     
